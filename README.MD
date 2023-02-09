@@ -1,12 +1,5 @@
-# Jobify
+# Job Finder React and Nodejs
 
-#### Track Your Job Search
-
-Project in Action - [Jobify](https://www.jobify.live/)
-
-#### Support
-
-Find the App Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
 
 #### Run The App Locally
 
