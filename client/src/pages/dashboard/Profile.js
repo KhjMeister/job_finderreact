@@ -32,10 +32,12 @@ const Profile = () => {
   return (
     <Wrapper>
       <form className='form' onSubmit={handleSubmit}>
-        <h3>profile</h3>
+        <h3>پروفایل</h3>
         {showAlert && <Alert />}
         <div className='form-center'>
           <FormRow
+            labelText='نام '
+
             type='text'
             name='name'
             value={name}
@@ -43,25 +45,28 @@ const Profile = () => {
           />
           <FormRow
             type='text'
-            labelText='last name'
+            labelText='نام خانوادگی'
             name='lastName'
             value={lastName}
             handleChange={(e) => setLastName(e.target.value)}
           />
           <FormRow
             type='email'
+            labelText='ایمیل '
+
             name='email'
             value={email}
             handleChange={(e) => setEmail(e.target.value)}
           />
           <FormRow
+            labelText='مکان زندگی'
             type='text'
             name='location'
             value={location}
             handleChange={(e) => setLocation(e.target.value)}
           />
           <button className='btn btn-block' type='submit' disabled={isLoading}>
-            {isLoading ? 'Please Wait...' : 'save changes'}
+            {isLoading ? 'لطفا صبر کنید' : 'ثبت تغییرات'}
           </button>
         </div>
       </form>

@@ -14,7 +14,7 @@ const Navbar = () => {
         </button>
         <div>
           <Logo />
-          <h3 className='logo-text'>dashboard</h3>
+          <h3 className='logo-text'>داشبرد</h3>
         </div>
         <div className='btn-container'>
           <button
@@ -28,7 +28,7 @@ const Navbar = () => {
           </button>
           <div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
             <button type='button' className='dropdown-btn' onClick={logoutUser}>
-              logout
+              خروج
             </button>
           </div>
         </div>

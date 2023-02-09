@@ -319,3 +319,7 @@ ul {
     margin-right: 0.5rem;
   }
 }
+
+.rtl-style{
+direction: rtl;
+}

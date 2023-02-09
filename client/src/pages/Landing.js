@@ -19,16 +19,13 @@ const Landing = () => {
           {/* info */}
           <div className='info'>
             <h1>
-              job <span>tracking</span> app
+              نرم افزار مدیریت  کار
             </h1>
             <p>
-              I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-              bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-              quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-              narwhal.
+            این پرو ژه برای جویندگان کار فناوری اطلاعات و برای یافتن و درخواست شغل مناسب است. جستجوی شغل یا ایجاد یک شغل برای تمام نفرات قابل دستیابی است. مشاغل را بر اساس علایق خود پیدا کنید
             </p>
             <Link to='/register' className='btn btn-hero'>
-              Login/Register
+              ورود/ثبت نام
             </Link>
           </div>
           <img src={main} alt='job hunt' className='img main-img' />

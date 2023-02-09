@@ -44,7 +44,7 @@ const AddJob = () => {
   return (
     <Wrapper>
       <form className='form'>
-        <h3>{isEditing ? 'edit job' : 'add job'}</h3>
+        <h3>{isEditing ? 'ویرایش شغل' : 'اضافه کردن شغل'}</h3>
         {showAlert && <Alert />}
         <div className='form-center'>
           {/* position */}
@@ -53,6 +53,8 @@ const AddJob = () => {
             name='position'
             value={position}
             handleChange={handleJobInput}
+            labelText="موقعیت شغلی"
+
           />
           {/* company */}
           <FormRow
@@ -60,14 +62,16 @@ const AddJob = () => {
             name='company'
             value={company}
             handleChange={handleJobInput}
+            labelText=" شرکت"
           />
           {/* location */}
           <FormRow
             type='text'
-            labelText='job location'
+            labelText='مکان شغل'
             name='jobLocation'
             value={jobLocation}
             handleChange={handleJobInput}
+  
           />
           {/* job status */}
           <FormRowSelect
@@ -75,11 +79,13 @@ const AddJob = () => {
             value={status}
             handleChange={handleJobInput}
             list={statusOptions}
+            labelText='وضعیت  شغل'
+
           />
           {/* job type */}
           <FormRowSelect
             name='jobType'
-            labelText='job type'
+            labelText='نوع کار'
             value={jobType}
             handleChange={handleJobInput}
             list={jobTypeOptions}
@@ -92,7 +98,7 @@ const AddJob = () => {
               onClick={handleSubmit}
               disabled={isLoading}
             >
-              submit
+              ثبت
             </button>
             <button
               className='btn btn-block clear-btn'
@@ -101,7 +107,7 @@ const AddJob = () => {
                 clearValues()
               }}
             >
-              clear
+              پاک کردن فرم
             </button>
           </div>
         </div>

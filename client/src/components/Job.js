@@ -42,14 +42,14 @@ const Job = ({
               className='btn edit-btn'
               onClick={() => setEditJob(_id)}
             >
-              Edit
+              ویرایش
             </Link>
             <button
               type='button'
               className='btn delete-btn'
               onClick={() => deleteJob(_id)}
             >
-              Delete
+              حذف
             </button>
           </div>
         </footer>

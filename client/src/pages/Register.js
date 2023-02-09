@@ -37,13 +37,13 @@ const Register = () => {
       setupUser({
         currentUser,
         endPoint: 'login',
-        alertText: 'Login Successful! Redirecting...',
+        alertText: ' وروود با موفقیت انجام شد در حال انتقال ....',
       });
     } else {
       setupUser({
         currentUser,
         endPoint: 'register',
-        alertText: 'User Created! Redirecting...',
+        alertText: 'کاربر ایجاد شد در حال انتقال ....',
       });
     }
   };
@@ -57,10 +57,10 @@ const Register = () => {
   }, [user, navigate]);
 
   return (
-    <Wrapper className='full-page'>
+    <Wrapper className='full-page rtl-style'>
       <form className='form' onSubmit={onSubmit}>
         <Logo />
-        <h3>{values.isMember ? 'Login' : 'Register'}</h3>
+        <h3>{values.isMember ? 'ورود' : 'ثبت نام'}</h3>
         {showAlert && <Alert />}
         {/* name input */}
         {!values.isMember && (
@@ -69,6 +69,8 @@ const Register = () => {
             name='name'
             value={values.name}
             handleChange={handleChange}
+            labelText="نام"
+
           />
         )}
 
@@ -78,6 +80,8 @@ const Register = () => {
           name='email'
           value={values.email}
           handleChange={handleChange}
+          labelText="ایمیل"
+
         />
         {/* password input */}
         <FormRow
@@ -85,9 +89,10 @@ const Register = () => {
           name='password'
           value={values.password}
           handleChange={handleChange}
+          labelText="پسورد"
         />
         <button type='submit' className='btn btn-block' disabled={isLoading}>
-          submit
+          ثبت
         </button>
         <button
           type='button'
@@ -97,16 +102,16 @@ const Register = () => {
             setupUser({
               currentUser: { email: 'testUser@test.com', password: 'secret' },
               endPoint: 'login',
-              alertText: 'Login Successful! Redirecting...',
+              alertText: ' وروود با موفقیت انجام شد در حال انتقال ....',
             });
           }}
         >
-          {isLoading ? 'loading...' : 'demo app'}
+          {isLoading ? 'در حال لود شدن ...' : 'دمو'}
         </button>
-        <p>
-          {values.isMember ? 'Not a member yet?' : 'Already a member?'}
+        <p style={{direction:'rtl'}}>
+          {values.isMember ? 'هنوز ثبت نام نکرده اید؟' : 'قبلا ثبت نام کرده اید؟'}
           <button type='button' onClick={toggleMember} className='member-btn'>
-            {values.isMember ? 'Register' : 'Login'}
+            {values.isMember ? 'ثبت نام' : 'ورود'}
           </button>
         </p>
       </form>

@@ -40,11 +40,12 @@ const SearchContainer = () => {
   return (
     <Wrapper>
       <form className='form'>
-        <h4>search form</h4>
+        <h4>فرم جستجو</h4>
         <div className='form-center'>
           {/* search position */}
 
           <FormRow
+            labelText=' جستجو'
             type='text'
             name='search'
             value={localSearch}
@@ -52,7 +53,7 @@ const SearchContainer = () => {
           />
           {/* search by status */}
           <FormRowSelect
-            labelText='status'
+            labelText='وضعیت'
             name='searchStatus'
             value={searchStatus}
             handleChange={handleSearch}
@@ -60,7 +61,7 @@ const SearchContainer = () => {
           />
           {/* search by type */}
           <FormRowSelect
-            labelText='type'
+            labelText='نوع'
             name='searchType'
             value={searchType}
             handleChange={handleSearch}
@@ -69,6 +70,7 @@ const SearchContainer = () => {
           {/* sort */}
           <FormRowSelect
             name='sort'
+            labelText='مرتب سازی'
             value={sort}
             handleChange={handleSearch}
             list={sortOptions}
@@ -78,7 +80,7 @@ const SearchContainer = () => {
             disabled={isLoading}
             onClick={handleSubmit}
           >
-            clear filters
+            حذف فیلتر ها
           </button>
         </div>
       </form>

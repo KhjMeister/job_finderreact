@@ -11,9 +11,9 @@ const ChartsContainer = () => {
   const { monthlyApplications: data } = useAppContext()
   return (
     <Wrapper>
-      <h4>Monthly Applications</h4>
+      <h4>درخواست های این ماه</h4>
       <button type='button' onClick={() => setBarChart(!barChart)}>
-        {barChart ? 'Area Chart' : 'Bar Chart'}
+        {barChart ? 'نمودار مساحتی' : 'نمودار میله ای'}
       </button>
       {barChart ? <BarChart data={data} /> : <AreaChart data={data} />}
     </Wrapper>
